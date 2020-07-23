@@ -142,6 +142,10 @@ target_link_libraries(sasl_gssapi PRIVATE
 	Kerberos
 )
 
+target_link_libraries(sasl_gs2 PRIVATE
+	GSS
+)
+
 #
 # plugin symlinks
 #

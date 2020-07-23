@@ -119,7 +119,8 @@ add_sasl_plugin(gs2 "" "lib" "gs2" ".so"
 	cyrus_sasl/plugins/gs2_token.c
 )
 
-add_sasl_plugin(srp "" "" "srp" ".so")
+# needs CoreUtils
+#add_sasl_plugin(srp "" "" "srp" ".so")
 
 #target_link_libraries(ssl_sasldb PRIVATE
 #	sasldb
@@ -155,5 +156,5 @@ InstallSymlink("../libgssapiv2.2.so" "${CMAKE_INSTALL_PREFIX}/libexec/darling/us
 
 InstallSymlink("../libcrammd5.2.so" "${CMAKE_INSTALL_PREFIX}/libexec/darling/usr/lib/sasl2/libcrammd5.2.so")
 
-InstallSymlink("../srp.so" "${CMAKE_INSTALL_PREFIX}/libexec/darling/usr/lib/sasl2/srp.so")
+#InstallSymlink("../srp.so" "${CMAKE_INSTALL_PREFIX}/libexec/darling/usr/lib/sasl2/srp.so")
 

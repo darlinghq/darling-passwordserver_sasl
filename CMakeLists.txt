@@ -93,6 +93,9 @@ function(add_sasl_plugin name init_name prefix output_name suffix)
 		SUFFIX "${suffix}"
 	)
 	install(TARGETS sasl_${name} DESTINATION libexec/darling/usr/lib/sasl2)
+	target_link_libraries(sasl_${name} PRIVATE
+		system
+	)
 endfunction()
 
 add_sasl_plugin(anonymous "" "lib" "anonymous.2" ".so")

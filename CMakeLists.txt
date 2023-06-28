@@ -139,6 +139,10 @@ target_compile_definitions(sasl_gssapi PRIVATE
 	K5_MAX_SSF=112
 )
 
+target_compile_options(sasl_gssapi PRIVATE
+	-Wno-error=incompatible-function-pointer-types
+)
+
 target_link_libraries(sasl_gssapi PRIVATE
 	Kerberos
 )

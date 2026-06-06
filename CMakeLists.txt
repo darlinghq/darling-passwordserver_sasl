@@ -141,6 +141,7 @@ target_compile_definitions(sasl_gssapi PRIVATE
 
 target_compile_options(sasl_gssapi PRIVATE
 	-Wno-error=incompatible-function-pointer-types
+	-Wno-error=incompatible-pointer-types
 )
 
 target_link_libraries(sasl_gssapi PRIVATE
